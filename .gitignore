@@ -15,7 +15,7 @@ crash.log
 #
 # example.tfvars
 #terraform.tfvars
-terraform.tfvars.example
+#terraform.tfvars.example
 #*.tfvars
 .terraform.lock.hcl
 

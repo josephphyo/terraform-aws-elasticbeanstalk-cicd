@@ -1,0 +1,8 @@
+codepipeline_bucket_name = "codepipeline-bucket"
+codepipeline_role        = "codepipeline-role"
+codepipeline_name        = "sample-pipeline"
+code_repo_id             = "name/repo_name"
+elasticbeanstalk_app_name = "test-eb"
+elasticbeanstalk_env_name = "Testeb-env"
+codebuild_role = "codebuild-role"
+codebuild_name = "sample-build"
