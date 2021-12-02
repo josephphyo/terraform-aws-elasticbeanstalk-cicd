@@ -127,7 +127,7 @@ resource "aws_codepipeline" "elasticbeanstalk_pipeline" {
       configuration = {
         FullRepositoryId     = var.code_repo_id
         ConnectionArn        = aws_codestarconnections_connection.github.arn
-        BranchName           = "main"
+        BranchName           = var.branch
         OutputArtifactFormat = "CODE_ZIP"
       }
     }

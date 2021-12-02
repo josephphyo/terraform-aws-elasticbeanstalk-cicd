@@ -33,6 +33,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_branch"></a> [branch](#input\_branch) | n/a | `any` | n/a | yes |
 | <a name="input_code_repo_id"></a> [code\_repo\_id](#input\_code\_repo\_id) | n/a | `any` | n/a | yes |
 | <a name="input_codebuild_name"></a> [codebuild\_name](#input\_codebuild\_name) | n/a | `any` | n/a | yes |
 | <a name="input_codebuild_role"></a> [codebuild\_role](#input\_codebuild\_role) | n/a | `any` | n/a | yes |
