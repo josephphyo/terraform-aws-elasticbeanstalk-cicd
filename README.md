@@ -47,7 +47,7 @@ No modules.
 | <a name="input_codepipeline_role"></a> [codepipeline\_role](#input\_codepipeline\_role) | n/a | `any` | n/a | yes |
 | <a name="input_elasticbeanstalk_app_name"></a> [elasticbeanstalk\_app\_name](#input\_elasticbeanstalk\_app\_name) | n/a | `any` | n/a | yes |
 | <a name="input_elasticbeanstalk_env_name"></a> [elasticbeanstalk\_env\_name](#input\_elasticbeanstalk\_env\_name) | n/a | `any` | n/a | yes |
-| <a name="input_environment_variables"></a> [environment\_variables](#input\_environment\_variables) | A list of maps, that contain the keys 'name', 'value', and 'type' to be used as additional environment variables for the build. Valid types are 'PLAINTEXT', 'PARAMETER\_STORE', or 'SECRETS\_MANAGER' | <pre>list(object(<br>    {<br>      name  = string<br>      value = string<br>      type  = string<br>  }))</pre> | <pre>[<br>  {<br>    "name": "NO_BUILD_ENV_VARS",<br>    "type": "PLAINTEXT",<br>    "value": "TRUE"<br>  }<br>]</pre> | no |
+| <a name="input_environment_variables"></a> [environment\_variables](#input\_environment\_variables) | n/a | <pre>list(object(<br>    {<br>      name  = string<br>      value = string<br>      type  = string<br>  }))</pre> | <pre>[<br>  {<br>    "name": "NO_BUILD_ENV_VARS",<br>    "type": "PLAINTEXT",<br>    "value": "TRUE"<br>  }<br>]</pre> | no |
 
 ## Outputs
 
