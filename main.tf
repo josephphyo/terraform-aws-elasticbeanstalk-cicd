@@ -242,7 +242,7 @@ POLICY
 
 ### Code Build Block
 resource "aws_codebuild_project" "elasticbeanstalk_build" {
-  badge_enabled  = false
+  badge_enabled  = var.badge_enabled
   build_timeout  = 60
   name           = var.codebuild_name
   queued_timeout = 480
@@ -252,11 +252,11 @@ resource "aws_codebuild_project" "elasticbeanstalk_build" {
   }
 
   environment {
-    compute_type                = "BUILD_GENERAL1_SMALL"
-    image                       = "aws/codebuild/amazonlinux2-x86_64-standard:2.0"
+    compute_type                = var.codebuild_compute_type
+    image                       = var.codebuild_build_image
     image_pull_credentials_type = "CODEBUILD"
     privileged_mode             = true
-    type                        = "LINUX_CONTAINER"
+    type                        = var.codebuild_type
   }
 
   logs_config {
@@ -271,6 +271,7 @@ resource "aws_codebuild_project" "elasticbeanstalk_build" {
   }
 
   source {
+    buildspec           = var.buildspec
     git_clone_depth     = 0
     insecure_ssl        = false
     report_build_status = false
