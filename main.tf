@@ -257,6 +257,15 @@ resource "aws_codebuild_project" "elasticbeanstalk_build" {
     image_pull_credentials_type = "CODEBUILD"
     privileged_mode             = true
     type                        = var.codebuild_type
+
+    dynamic "environment_variable" {
+      for_each = var.environment_variables
+      content {
+        name  = environment_variable.value.name
+        value = environment_variable.value.value
+        type  = environment_variable.value.type
+      }
+    }
   }
 
   logs_config {

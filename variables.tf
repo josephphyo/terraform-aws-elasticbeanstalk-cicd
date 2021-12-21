@@ -15,3 +15,20 @@ variable "buildspec" {
   type    = string
   default = ""
 }
+variable "environment_variables" {
+  type = list(object(
+    {
+      name  = string
+      value = string
+      type  = string
+  }))
+
+  default = [
+    {
+      name  = "NO_BUILD_ENV_VARS"
+      value = "TRUE"
+      type  = "PLAINTEXT"
+  }]
+
+  description = "A list of maps, that contain the keys 'name', 'value', and 'type' to be used as additional environment variables for the build. Valid types are 'PLAINTEXT', 'PARAMETER_STORE', or 'SECRETS_MANAGER'"
+}
