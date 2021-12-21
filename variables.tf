@@ -11,4 +11,7 @@ variable "codebuild_name" {}
 variable "codebuild_compute_type" {}
 variable "codebuild_build_image" {}
 variable "codebuild_type" {}
-variable "buildspec" {}
+variable "buildspec" {
+  type    = string
+  default = ""
+}

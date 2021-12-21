@@ -35,7 +35,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_badge_enabled"></a> [badge\_enabled](#input\_badge\_enabled) | n/a | `any` | n/a | yes |
 | <a name="input_branch"></a> [branch](#input\_branch) | n/a | `any` | n/a | yes |
-| <a name="input_buildspec"></a> [buildspec](#input\_buildspec) | n/a | `any` | n/a | yes |
+| <a name="input_buildspec"></a> [buildspec](#input\_buildspec) | n/a | `string` | `""` | no |
 | <a name="input_code_repo_id"></a> [code\_repo\_id](#input\_code\_repo\_id) | n/a | `any` | n/a | yes |
 | <a name="input_codebuild_build_image"></a> [codebuild\_build\_image](#input\_codebuild\_build\_image) | n/a | `any` | n/a | yes |
 | <a name="input_codebuild_compute_type"></a> [codebuild\_compute\_type](#input\_codebuild\_compute\_type) | n/a | `any` | n/a | yes |
