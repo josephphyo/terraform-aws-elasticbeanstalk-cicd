@@ -29,6 +29,4 @@ variable "environment_variables" {
       value = "TRUE"
       type  = "PLAINTEXT"
   }]
-
-  description = "A list of maps, that contain the keys 'name', 'value', and 'type' to be used as additional environment variables for the build. Valid types are 'PLAINTEXT', 'PARAMETER_STORE', or 'SECRETS_MANAGER'"
 }
