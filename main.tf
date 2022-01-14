@@ -138,6 +138,12 @@ resource "aws_codepipeline" "elasticbeanstalk_pipeline" {
       category = "Build"
       configuration = {
         "ProjectName" = aws_codebuild_project.elasticbeanstalk_build.name
+        ## CodePipeline EnvVars for CodeBuild Actions
+        for_each = var.codepipeline_environment_variables
+
+        name  = codepipeline_environment_variables.value.name
+        value = codepipeline_environment_variables.value.value
+        type  = codepipeline_environment_variables.value.type
       }
       input_artifacts = [
         "SourceArtifact",

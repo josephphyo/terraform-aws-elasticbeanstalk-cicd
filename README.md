@@ -43,6 +43,7 @@ No modules.
 | <a name="input_codebuild_role"></a> [codebuild\_role](#input\_codebuild\_role) | n/a | `any` | n/a | yes |
 | <a name="input_codebuild_type"></a> [codebuild\_type](#input\_codebuild\_type) | n/a | `any` | n/a | yes |
 | <a name="input_codepipeline_bucket_name"></a> [codepipeline\_bucket\_name](#input\_codepipeline\_bucket\_name) | n/a | `any` | n/a | yes |
+| <a name="input_codepipeline_environment_variables"></a> [codepipeline\_environment\_variables](#input\_codepipeline\_environment\_variables) | n/a | <pre>list(object(<br>    {<br>      name  = string<br>      value = string<br>      type  = string<br>  }))</pre> | <pre>[<br>  {<br>    "name": "CODEPIPELINE_CODEBUILD_ACTIONS_NO_BUILD_ENV_VARS",<br>    "type": "PLAINTEXT",<br>    "value": "TRUE"<br>  }<br>]</pre> | no |
 | <a name="input_codepipeline_name"></a> [codepipeline\_name](#input\_codepipeline\_name) | n/a | `any` | n/a | yes |
 | <a name="input_codepipeline_role"></a> [codepipeline\_role](#input\_codepipeline\_role) | n/a | `any` | n/a | yes |
 | <a name="input_elasticbeanstalk_app_name"></a> [elasticbeanstalk\_app\_name](#input\_elasticbeanstalk\_app\_name) | n/a | `any` | n/a | yes |

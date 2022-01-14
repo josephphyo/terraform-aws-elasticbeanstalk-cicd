@@ -30,3 +30,18 @@ variable "environment_variables" {
       type  = "PLAINTEXT"
   }]
 }
+variable "codepipeline_environment_variables" {
+  type = list(object(
+    {
+      name  = string
+      value = string
+      type  = string
+  }))
+
+  default = [
+    {
+      name  = "CODEPIPELINE_CODEBUILD_ACTIONS_NO_BUILD_ENV_VARS"
+      value = "TRUE"
+      type  = "PLAINTEXT"
+  }]
+}
