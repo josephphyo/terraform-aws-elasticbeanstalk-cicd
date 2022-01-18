@@ -3,12 +3,7 @@
 ###########################
 
 locals {
-  default_environment = {
-    name  = "CODEPIPELINE_ENV_VARIABLE"
-    value = "TRUE"
-    type  = "PLAINTEXT"
-  }
-  environment = jsonencode([for k, v in merge(local.default_environment, var.codepipeline_environment) : { name : k, value : v, type : "PLAINTEXT" }])
+  environment = jsonencode([for k, v in var.codepipeline_environment : { name : k, value : v, type : "PLAINTEXT" }])
 }
 resource "aws_s3_bucket" "codepipeline_bucket" {
   bucket = var.codepipeline_bucket_name
