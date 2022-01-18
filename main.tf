@@ -1,6 +1,15 @@
 ###########################
 ## Code Pipeline
 ###########################
+
+locals {
+  default_environment = {
+    name  = "CODEPIPELINE_ENV_VARIABLE"
+    value = "TRUE"
+    type  = "PLAINTEXT"
+  }
+  environment = jsonencode([for k, v in merge(local.default_environment, var.codepipeline_environment) : { name : k, value : v, type : "PLAINTEXT" }])
+}
 resource "aws_s3_bucket" "codepipeline_bucket" {
   bucket = var.codepipeline_bucket_name
   acl    = "private"
@@ -137,13 +146,8 @@ resource "aws_codepipeline" "elasticbeanstalk_pipeline" {
     action {
       category = "Build"
       configuration = {
-        "ProjectName" = aws_codebuild_project.elasticbeanstalk_build.name
-        ## CodePipeline EnvVars for CodeBuild Actions
-        for_each = var.codepipeline_environment_variable
-
-        name  = each.value.name
-        value = each.value.value
-        type  = each.value.type
+        ProjectName          = aws_codebuild_project.elasticbeanstalk_build.name
+        EnvironmentVariables = local.environment
       }
       input_artifacts = [
         "SourceArtifact",

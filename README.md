@@ -43,7 +43,7 @@ No modules.
 | <a name="input_codebuild_role"></a> [codebuild\_role](#input\_codebuild\_role) | n/a | `any` | n/a | yes |
 | <a name="input_codebuild_type"></a> [codebuild\_type](#input\_codebuild\_type) | n/a | `any` | n/a | yes |
 | <a name="input_codepipeline_bucket_name"></a> [codepipeline\_bucket\_name](#input\_codepipeline\_bucket\_name) | n/a | `any` | n/a | yes |
-| <a name="input_codepipeline_environment_variable"></a> [codepipeline\_environment\_variable](#input\_codepipeline\_environment\_variable) | n/a | `map(any)` | <pre>{<br>  "codepipeline_environment_variables": {<br>    "name": "CODEPIPELINE STAGE ENV",<br>    "type": "PLAINTEXT",<br>    "value": "TRUE"<br>  }<br>}</pre> | no |
+| <a name="input_codepipeline_environment"></a> [codepipeline\_environment](#input\_codepipeline\_environment) | A map of environment varaibles to use for this workspace | `map(string)` | `{}` | no |
 | <a name="input_codepipeline_name"></a> [codepipeline\_name](#input\_codepipeline\_name) | n/a | `any` | n/a | yes |
 | <a name="input_codepipeline_role"></a> [codepipeline\_role](#input\_codepipeline\_role) | n/a | `any` | n/a | yes |
 | <a name="input_elasticbeanstalk_app_name"></a> [elasticbeanstalk\_app\_name](#input\_elasticbeanstalk\_app\_name) | n/a | `any` | n/a | yes |

@@ -30,13 +30,8 @@ variable "environment_variables" {
       type  = "PLAINTEXT"
   }]
 }
-variable "codepipeline_environment_variable" {
-  type = map(any)
-  default = {
-    "codepipeline_environment_variables" = {
-      name  = "CODEPIPELINE STAGE ENV"
-      value = "TRUE"
-      type  = "PLAINTEXT"
-    }
-  }
+variable "codepipeline_environment" {
+  type        = map(string)
+  default     = {}
+  description = "A map of environment varaibles to use for this workspace"
 }
